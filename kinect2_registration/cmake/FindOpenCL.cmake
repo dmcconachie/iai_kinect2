@@ -137,7 +137,8 @@ if(WIN32)
   endif()
 else()
   find_library(OpenCL_LIBRARY
-    NAMES OpenCL)
+    NAMES OpenCL
+    HINTS ${OpenCL_INCLUDE_DIR}/../lib64)
 endif()
 
 set(OpenCL_LIBRARIES ${OpenCL_LIBRARY})
